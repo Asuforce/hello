@@ -11,26 +11,35 @@ import XCTest
 
 class helloTests: XCTestCase {
     
+    var counter = Counter()
+    
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        self.counter = Counter()
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testCountUp() {
+        self.counter.countUp()
+        XCTAssertEqual(1, self.counter.current())
+
+        self.counter.countUp()
+        XCTAssertEqual(2, self.counter.current())
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
+    func testCountDown() {
+        self.counter.countDown()
+        XCTAssertEqual(-1, self.counter.current())
+        
+        self.counter.countDown()
+        XCTAssertEqual(-2, self.counter.current())
     }
     
+    func testInitialCount() {
+        XCTAssertEqual(0, self.counter.current())
+    }
 }
