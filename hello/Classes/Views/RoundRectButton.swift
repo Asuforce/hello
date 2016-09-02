@@ -9,13 +9,12 @@
 import UIKit
 
 class RoundRectButton: UIButton {
-
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        self.layer.cornerRadius = 5
+        self.backgroundColor = UIColor(red: 0.0, green: 0.478, blue: 1.0, alpha: 1.0)
+        self.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
     }
-    */
-
 }
