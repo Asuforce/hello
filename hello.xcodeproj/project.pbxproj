@@ -15,6 +15,7 @@
 		3211B2DA1D77DA7E001759B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3211B2D81D77DA7E001759B1 /* Main.storyboard */; };
 		3211B2DC1D77DA9F001759B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3211B2DB1D77DA9F001759B1 /* ViewController.swift */; };
 		3211B2DE1D77EFB3001759B1 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3211B2DD1D77EFB3001759B1 /* Counter.swift */; };
+		323FE6421D795DAE00C9B62A /* RoundRectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323FE6411D795DAE00C9B62A /* RoundRectButton.swift */; };
 		3295F8E41D79253100989C62 /* Next.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3295F8E31D79253100989C62 /* Next.storyboard */; };
 		3295F8E71D792DA300989C62 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3295F8E51D792DA300989C62 /* Alamofire.framework */; };
 		3295F8E81D792DA300989C62 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3295F8E61D792DA300989C62 /* SwiftyJSON.framework */; };
@@ -56,6 +57,7 @@
 		3211B2D81D77DA7E001759B1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3211B2DB1D77DA9F001759B1 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3211B2DD1D77EFB3001759B1 /* Counter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
+		323FE6411D795DAE00C9B62A /* RoundRectButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundRectButton.swift; sourceTree = "<group>"; };
 		3295F8E31D79253100989C62 /* Next.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Next.storyboard; sourceTree = "<group>"; };
 		3295F8E51D792DA300989C62 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		3295F8E61D792DA300989C62 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 		3211B2D51D77D9AD001759B1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				323FE6411D795DAE00C9B62A /* RoundRectButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				323FE6421D795DAE00C9B62A /* RoundRectButton.swift in Sources */,
 				3211B2DC1D77DA9F001759B1 /* ViewController.swift in Sources */,
 				32B9A0D91D79528800A6DB02 /* TableViewController.swift in Sources */,
 				3211B2A31D77D950001759B1 /* AppDelegate.swift in Sources */,
