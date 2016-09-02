@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,32 +18,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SeR-Nu-WC5">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SeR-Nu-WC5">
                                 <rect key="frame" x="278" y="291" width="45" height="30"/>
                                 <state key="normal" title="増える"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="178" y="291" width="45" height="30"/>
-                                </variation>
                                 <connections>
                                     <action selector="increaseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uua-Hx-eD3"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SbW-IF-G6X">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SbW-IF-G6X">
                                 <rect key="frame" x="279" y="104" width="42" height="21"/>
                                 <accessibility key="accessibilityConfiguration" identifier="countLabel"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="179" y="104" width="42" height="21"/>
-                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XpT-Nc-Fnx">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="減る"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="185" y="414" width="30" height="30"/>
-                                </variation>
                                 <connections>
                                     <action selector="decreaseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uqJ-Kp-1hb"/>
                                 </connections>
@@ -50,29 +42,43 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ixg-Fg-XgV">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Next"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="83" y="291" width="32" height="30"/>
-                                </variation>
                                 <connections>
                                     <segue destination="C0X-wI-67u" kind="show" id="3T7-Nc-i1Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKc-j5-zoc">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Table"/>
+                                <connections>
+                                    <segue destination="Khr-tP-J54" kind="show" id="aoG-rr-1Oa"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="sKc-j5-zoc" secondAttribute="trailing" constant="44" id="8BF-8R-68l"/>
                             <constraint firstItem="SbW-IF-G6X" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="84" id="Bsr-8n-OHI"/>
+                            <constraint firstItem="SeR-Nu-WC5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="C7R-Wd-6ce"/>
                             <constraint firstItem="XpT-Nc-Fnx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FSH-T1-GJv"/>
-                            <constraint firstItem="SeR-Nu-WC5" firstAttribute="top" secondItem="SbW-IF-G6X" secondAttribute="bottom" constant="166" id="OZt-ga-828"/>
+                            <constraint firstItem="Ixg-Fg-XgV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NGG-bK-tjc"/>
                             <constraint firstItem="SbW-IF-G6X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sz9-VJ-m5a"/>
                             <constraint firstItem="XpT-Nc-Fnx" firstAttribute="top" secondItem="SeR-Nu-WC5" secondAttribute="bottom" constant="93" id="jTT-Sl-lS9"/>
                             <constraint firstItem="SeR-Nu-WC5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mv4-QD-Rzz"/>
+                            <constraint firstItem="sKc-j5-zoc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rMH-jp-XyJ"/>
+                            <constraint firstItem="Ixg-Fg-XgV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="63" id="yHY-E0-0u0"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="XpT-Nc-Fnx"/>
                                 <exclude reference="Ixg-Fg-XgV"/>
+                                <exclude reference="sKc-j5-zoc"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="NGG-bK-tjc"/>
+                                <exclude reference="yHY-E0-0u0"/>
+                                <exclude reference="C7R-Wd-6ce"/>
+                                <exclude reference="8BF-8R-68l"/>
+                                <exclude reference="rMH-jp-XyJ"/>
                                 <exclude reference="FSH-T1-GJv"/>
                                 <exclude reference="jTT-Sl-lS9"/>
                             </mask>
@@ -81,8 +87,14 @@
                             <mask key="subviews">
                                 <include reference="XpT-Nc-Fnx"/>
                                 <include reference="Ixg-Fg-XgV"/>
+                                <include reference="sKc-j5-zoc"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="NGG-bK-tjc"/>
+                                <include reference="yHY-E0-0u0"/>
+                                <include reference="C7R-Wd-6ce"/>
+                                <include reference="8BF-8R-68l"/>
+                                <include reference="rMH-jp-XyJ"/>
                                 <include reference="FSH-T1-GJv"/>
                                 <include reference="jTT-Sl-lS9"/>
                             </mask>
@@ -103,7 +115,15 @@
                 <viewControllerPlaceholder storyboardName="Next" id="C0X-wI-67u" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cSL-3D-qdT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2091.75" y="472"/>
+            <point key="canvasLocation" x="2087.25" y="448"/>
+        </scene>
+        <!--Table-->
+        <scene sceneID="mum-s2-5Qt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Table" id="Khr-tP-J54" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZOR-27-Ad8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2099.25" y="621"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QnB-Nf-qfA">
