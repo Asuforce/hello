@@ -10,9 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
     @IBOutlet weak var countLabel: UILabel!
-    
 
     @IBAction func increaseButtonTapped(sender: AnyObject) {
         self.counter.countUp()
