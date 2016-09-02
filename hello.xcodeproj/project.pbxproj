@@ -18,6 +18,10 @@
 		3295F8E41D79253100989C62 /* Next.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3295F8E31D79253100989C62 /* Next.storyboard */; };
 		3295F8E71D792DA300989C62 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3295F8E51D792DA300989C62 /* Alamofire.framework */; };
 		3295F8E81D792DA300989C62 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3295F8E61D792DA300989C62 /* SwiftyJSON.framework */; };
+		3295F8EB1D792F5200989C62 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3295F8EA1D792F5200989C62 /* APIClient.swift */; };
+		3295F8ED1D79429700989C62 /* Hoge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3295F8EC1D79429700989C62 /* Hoge.swift */; };
+		32B9A0D71D7946AD00A6DB02 /* Table.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32B9A0D61D7946AD00A6DB02 /* Table.storyboard */; };
+		32B9A0D91D79528800A6DB02 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B9A0D81D79528800A6DB02 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 		3295F8E31D79253100989C62 /* Next.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Next.storyboard; sourceTree = "<group>"; };
 		3295F8E51D792DA300989C62 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		3295F8E61D792DA300989C62 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		3295F8EA1D792F5200989C62 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		3295F8EC1D79429700989C62 /* Hoge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hoge.swift; sourceTree = "<group>"; };
+		32B9A0D61D7946AD00A6DB02 /* Table.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Table.storyboard; sourceTree = "<group>"; };
+		32B9A0D81D79528800A6DB02 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				3211B2DB1D77DA9F001759B1 /* ViewController.swift */,
+				32B9A0D81D79528800A6DB02 /* TableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -159,6 +168,7 @@
 		3211B2D21D77D9AD001759B1 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				3295F8EA1D792F5200989C62 /* APIClient.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -167,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				3211B2DD1D77EFB3001759B1 /* Counter.swift */,
+				3295F8EC1D79429700989C62 /* Hoge.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -191,6 +202,7 @@
 				3211B2D71D77DA7E001759B1 /* LaunchScreen.storyboard */,
 				3211B2D81D77DA7E001759B1 /* Main.storyboard */,
 				3295F8E31D79253100989C62 /* Next.storyboard */,
+				32B9A0D61D7946AD00A6DB02 /* Table.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -303,6 +315,7 @@
 			files = (
 				3211B2DA1D77DA7E001759B1 /* Main.storyboard in Resources */,
 				3295F8E41D79253100989C62 /* Next.storyboard in Resources */,
+				32B9A0D71D7946AD00A6DB02 /* Table.storyboard in Resources */,
 				3211B2AA1D77D950001759B1 /* Assets.xcassets in Resources */,
 				3211B2D91D77DA7E001759B1 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -327,12 +340,12 @@
 /* Begin PBXShellScriptBuildPhase section */
 		3295F8E91D792DCC00989C62 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework ",
-				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework ",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 			);
 			outputPaths = (
 			);
@@ -348,8 +361,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3211B2DC1D77DA9F001759B1 /* ViewController.swift in Sources */,
+				32B9A0D91D79528800A6DB02 /* TableViewController.swift in Sources */,
 				3211B2A31D77D950001759B1 /* AppDelegate.swift in Sources */,
+				3295F8ED1D79429700989C62 /* Hoge.swift in Sources */,
 				3211B2DE1D77EFB3001759B1 /* Counter.swift in Sources */,
+				3295F8EB1D792F5200989C62 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
