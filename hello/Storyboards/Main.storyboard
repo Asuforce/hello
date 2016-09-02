@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -18,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SeR-Nu-WC5">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SeR-Nu-WC5" customClass="RoundRectButton" customModule="hello" customModuleProvider="target">
                                 <rect key="frame" x="278" y="291" width="45" height="30"/>
                                 <state key="normal" title="増える"/>
                                 <connections>
@@ -32,7 +33,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XpT-Nc-Fnx">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XpT-Nc-Fnx" customClass="RoundRectButton" customModule="hello" customModuleProvider="target">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="減る"/>
                                 <connections>
@@ -76,11 +77,11 @@
                             <mask key="constraints">
                                 <exclude reference="NGG-bK-tjc"/>
                                 <exclude reference="yHY-E0-0u0"/>
-                                <exclude reference="C7R-Wd-6ce"/>
-                                <exclude reference="8BF-8R-68l"/>
-                                <exclude reference="rMH-jp-XyJ"/>
                                 <exclude reference="FSH-T1-GJv"/>
                                 <exclude reference="jTT-Sl-lS9"/>
+                                <exclude reference="8BF-8R-68l"/>
+                                <exclude reference="rMH-jp-XyJ"/>
+                                <exclude reference="C7R-Wd-6ce"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -92,11 +93,11 @@
                             <mask key="constraints">
                                 <include reference="NGG-bK-tjc"/>
                                 <include reference="yHY-E0-0u0"/>
-                                <include reference="C7R-Wd-6ce"/>
-                                <include reference="8BF-8R-68l"/>
-                                <include reference="rMH-jp-XyJ"/>
                                 <include reference="FSH-T1-GJv"/>
                                 <include reference="jTT-Sl-lS9"/>
+                                <include reference="8BF-8R-68l"/>
+                                <include reference="rMH-jp-XyJ"/>
+                                <include reference="C7R-Wd-6ce"/>
                             </mask>
                         </variation>
                     </view>
