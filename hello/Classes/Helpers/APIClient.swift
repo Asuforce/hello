@@ -37,16 +37,15 @@ enum Endpoint {
     case FriendIndex
     
     func method() -> Alamofire.Method {
-        switch self {
-        case .HogeIndex: return .GET
-        case .FriendIndex: return .GET
-        }
+        return .GET
     }
     
     func path() -> String {
         switch self {
-        case .HogeIndex: return "/api/microposts"
-        case .FriendIndex: return "/api/characters"
+        case .HogeIndex:
+            return "/api/microposts"
+        case .FriendIndex:
+            return "/api/characters"
         }
     }
 }

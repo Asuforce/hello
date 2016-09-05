@@ -11,18 +11,19 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var countLabel: UILabel!
-
+    
     @IBAction func increaseButtonTapped(sender: AnyObject) {
         self.counter.countUp()
         countLabel.text = String(self.counter.current())
     }
+    
     @IBAction func decreaseButtonTapped(sender: AnyObject) {
         self.counter.countDown()
         countLabel.text = String(self.counter.current())
     }
-
+    
     var counter = Counter()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
