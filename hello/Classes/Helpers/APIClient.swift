@@ -12,11 +12,11 @@ import SwiftyJSON
 
 class APIClient {
     static private let baseUrl = "https://engineers-training.herokuapp.com"
-
+    
     static func request(endpoint: Endpoint, handler: (json: JSON) -> Void) {
         let method = endpoint.method()
         let url = fullURL(endpoint)
-
+        
         Alamofire.request(method, url).validate(statusCode: 200...299).responseJSON { response in
             switch response.result {
             case .Success(let value):
@@ -26,7 +26,7 @@ class APIClient {
             }
         }
     }
-
+    
     static private func fullURL(endpoint: Endpoint) -> String {
         return baseUrl + endpoint.path()
     }
@@ -34,16 +34,19 @@ class APIClient {
 
 enum Endpoint {
     case HogeIndex
-
+    case FriendIndex
+    
     func method() -> Alamofire.Method {
         switch self {
         case .HogeIndex: return .GET
+        case .FriendIndex: return .GET
         }
     }
-
+    
     func path() -> String {
         switch self {
         case .HogeIndex: return "/api/microposts"
+        case .FriendIndex: return "/api/characters"
         }
     }
 }
