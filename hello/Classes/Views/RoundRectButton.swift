@@ -8,13 +8,27 @@
 
 import UIKit
 
+@IBDesignable
 class RoundRectButton: UIButton {
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        
-        self.layer.cornerRadius = 5
-        self.backgroundColor = UIColor(red: 0.0, green: 0.478, blue: 1.0, alpha: 1.0)
-        self.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+    @IBInspectable
+    var cornerRadius: CGFloat = 0 {
+        didSet {
+            self.layer.cornerRadius = cornerRadius
+        }
+    }
+    
+    @IBInspectable
+    var buttonColor: UIColor = UIColor.whiteColor() {
+        didSet {
+            self.backgroundColor = buttonColor
+        }
+    }
+    
+    @IBInspectable
+    var textColor: UIColor = UIColor.whiteColor() {
+        didSet {
+            self.setTitleColor(textColor, forState: UIControlState.Normal)
+        }
     }
 }
