@@ -49,18 +49,11 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XpT-Nc-Fnx" customClass="RoundRectButton" customModule="hello" customModuleProvider="target">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="減る"/>
-                                <variation key="widthClass=compact" ambiguous="YES">
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="185" y="408" width="30" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="decreaseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uqJ-Kp-1hb"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ixg-Fg-XgV">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Next"/>
-                                <connections>
-                                    <segue destination="C0X-wI-67u" kind="show" id="3T7-Nc-i1Z"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKc-j5-zoc">
@@ -73,7 +66,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUK-jH-o94">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="MyTable"/>
-                                <variation key="widthClass=compact" ambiguous="YES">
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="278" y="408" width="79" height="30"/>
                                 </variation>
                                 <connections>
@@ -87,9 +80,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="sKc-j5-zoc" secondAttribute="trailing" constant="44" id="8BF-8R-68l"/>
                             <constraint firstItem="SbW-IF-G6X" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="84" id="Bsr-8n-OHI"/>
                             <constraint firstItem="SeR-Nu-WC5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="C7R-Wd-6ce"/>
-                            <constraint firstItem="SeR-Nu-WC5" firstAttribute="leading" secondItem="Ixg-Fg-XgV" secondAttribute="trailing" constant="63" id="DJA-NU-C7J"/>
                             <constraint firstItem="XpT-Nc-Fnx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FSH-T1-GJv"/>
-                            <constraint firstItem="Ixg-Fg-XgV" firstAttribute="baseline" secondItem="SeR-Nu-WC5" secondAttribute="baseline" id="KaH-D3-mOm"/>
                             <constraint firstItem="yUK-jH-o94" firstAttribute="baseline" secondItem="XpT-Nc-Fnx" secondAttribute="baseline" id="On8-8Y-WU7"/>
                             <constraint firstItem="yUK-jH-o94" firstAttribute="leading" secondItem="XpT-Nc-Fnx" secondAttribute="trailing" constant="63" id="SN6-WH-5cM"/>
                             <constraint firstItem="SbW-IF-G6X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sz9-VJ-m5a"/>
@@ -101,14 +92,11 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="XpT-Nc-Fnx"/>
-                                <exclude reference="Ixg-Fg-XgV"/>
                                 <exclude reference="sKc-j5-zoc"/>
                                 <exclude reference="yUK-jH-o94"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="KaH-D3-mOm"/>
                                 <exclude reference="C7R-Wd-6ce"/>
-                                <exclude reference="DJA-NU-C7J"/>
                                 <exclude reference="6Yz-zr-xJ1"/>
                                 <exclude reference="8BF-8R-68l"/>
                                 <exclude reference="rMH-jp-XyJ"/>
@@ -122,14 +110,11 @@
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="XpT-Nc-Fnx"/>
-                                <include reference="Ixg-Fg-XgV"/>
                                 <include reference="sKc-j5-zoc"/>
                                 <include reference="yUK-jH-o94"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="KaH-D3-mOm"/>
                                 <include reference="C7R-Wd-6ce"/>
-                                <include reference="DJA-NU-C7J"/>
                                 <include reference="6Yz-zr-xJ1"/>
                                 <include reference="8BF-8R-68l"/>
                                 <include reference="rMH-jp-XyJ"/>
@@ -149,14 +134,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1498.5" y="472"/>
-        </scene>
-        <!--Next-->
-        <scene sceneID="2Al-9V-cTL">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Next" id="C0X-wI-67u" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cSL-3D-qdT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2087.25" y="448"/>
         </scene>
         <!--Table-->
         <scene sceneID="mum-s2-5Qt">
