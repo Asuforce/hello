@@ -33,7 +33,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="faceImageView" destination="w2V-gO-lhw" id="DCQ-nQ-2WA"/>
-                <outlet property="lebelLabel" destination="p9I-PY-QtS" id="18U-Tb-6wx"/>
+                <outlet property="levelLabel" destination="p9I-PY-QtS" id="gOd-AI-slI"/>
                 <outlet property="nameLabel" destination="L5t-AQ-ddz" id="VWh-Kf-ngw"/>
             </connections>
             <point key="canvasLocation" x="249" y="491"/>

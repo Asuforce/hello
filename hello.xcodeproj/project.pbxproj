@@ -26,6 +26,7 @@
 		32A29AD61D7D1BC70063FABE /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A29AD41D7D1BC70063FABE /* MyTableViewCell.swift */; };
 		32A29AD71D7D1BC70063FABE /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32A29AD51D7D1BC70063FABE /* MyTableViewCell.xib */; };
 		32A29B2A1D7D3B570063FABE /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A29B291D7D3B570063FABE /* Friend.swift */; };
+		32A29B2E1D7D47630063FABE /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A29B2D1D7D47630063FABE /* AlamofireImage.framework */; };
 		32B9A0D71D7946AD00A6DB02 /* Table.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32B9A0D61D7946AD00A6DB02 /* Table.storyboard */; };
 		32B9A0D91D79528800A6DB02 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B9A0D81D79528800A6DB02 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -73,6 +74,7 @@
 		32A29AD41D7D1BC70063FABE /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		32A29AD51D7D1BC70063FABE /* MyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
 		32A29B291D7D3B570063FABE /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		32A29B2D1D7D47630063FABE /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		32B9A0D61D7946AD00A6DB02 /* Table.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Table.storyboard; sourceTree = "<group>"; };
 		32B9A0D81D79528800A6DB02 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32A29B2E1D7D47630063FABE /* AlamofireImage.framework in Frameworks */,
 				3295F8E71D792DA300989C62 /* Alamofire.framework in Frameworks */,
 				3295F8E81D792DA300989C62 /* SwiftyJSON.framework in Frameworks */,
 			);
@@ -107,6 +110,7 @@
 		3211B2961D77D950001759B1 = {
 			isa = PBXGroup;
 			children = (
+				32A29B2D1D7D47630063FABE /* AlamofireImage.framework */,
 				3295F8E51D792DA300989C62 /* Alamofire.framework */,
 				3295F8E61D792DA300989C62 /* SwiftyJSON.framework */,
 				3211B2A11D77D950001759B1 /* hello */,
@@ -366,6 +370,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
 			);
 			outputPaths = (
 			);

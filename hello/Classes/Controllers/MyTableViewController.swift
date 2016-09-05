@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class MyTableViewController: UITableViewController {
     
@@ -28,7 +29,6 @@ class MyTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return self.friends.count
     }
     
@@ -41,9 +41,16 @@ class MyTableViewController: UITableViewController {
     }
     
     private func updateCell(cell: MyTableViewCell, indexPath: NSIndexPath) {
-        cell.nameLabel?.text = self.friends[indexPath.row].name
-        cell.lebelLabel?.text = self.friends[indexPath.row].name
-        cell.faceImageView?.image = UIImage(named: "obake")
+        let name = self.friends[indexPath.row].name
+        let URL = NSURL(string: self.friends[indexPath.row].image_url)!
+        let placeholderImage = UIImage(named: name)
+        
+        cell.nameLabel?.text = name
+        cell.levelLabel?.text = "Lv.\(self.friends[indexPath.row].level)"
+        cell.faceImageView?.af_setImageWithURL(
+            URL,
+            placeholderImage: placeholderImage,
+            imageTransition: .CurlDown(0.2)
+        )
     }
-    
 }

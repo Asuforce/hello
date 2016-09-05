@@ -11,7 +11,7 @@ import UIKit
 class MyTableViewCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var lebelLabel: UILabel!
+    @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var faceImageView: UIImageView!
     
     override func awakeFromNib() {

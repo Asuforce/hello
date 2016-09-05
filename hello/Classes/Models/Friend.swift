@@ -10,21 +10,20 @@ import Foundation
 
 class Friend {
     var name: String
-    var lebel: Int
+    var level: Int
     var image_url: String
     
-    init(name: String, lebel: Int, image_url: String) {
+    init(name: String, level: Int, image_url: String) {
         self.name = name
-        self.lebel = lebel
+        self.level = level
         self.image_url = image_url
     }
     
     static func fetchFriends(handler: (Array<Friend> -> Void)) {
         APIClient.request(Endpoint.FriendIndex) { json in
             let friends = json["data"].arrayValue.map {
-                Friend(name: $0["name"].stringValue, lebel: $0["lebel"].intValue, image_url: $0["image_url"].stringValue)
+                Friend(name: $0["name"].stringValue, level: $0["level"].intValue, image_url: $0["image_url"].stringValue)
             }
-            
             handler(friends)
         }
     }

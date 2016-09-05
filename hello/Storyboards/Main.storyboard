@@ -49,6 +49,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XpT-Nc-Fnx" customClass="RoundRectButton" customModule="hello" customModuleProvider="target">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="減る"/>
+                                <variation key="widthClass=compact" ambiguous="YES">
+                                    <rect key="frame" x="185" y="408" width="30" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="decreaseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uqJ-Kp-1hb"/>
                                 </connections>
@@ -70,6 +73,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUK-jH-o94">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="MyTable"/>
+                                <variation key="widthClass=compact" ambiguous="YES">
+                                    <rect key="frame" x="278" y="408" width="79" height="30"/>
+                                </variation>
                                 <connections>
                                     <segue destination="mTY-zh-cPx" kind="show" id="saL-Ub-vlA"/>
                                 </connections>
@@ -77,6 +83,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="sKc-j5-zoc" firstAttribute="leading" secondItem="SeR-Nu-WC5" secondAttribute="trailing" constant="75" id="6Yz-zr-xJ1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="sKc-j5-zoc" secondAttribute="trailing" constant="44" id="8BF-8R-68l"/>
                             <constraint firstItem="SbW-IF-G6X" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="84" id="Bsr-8n-OHI"/>
                             <constraint firstItem="SeR-Nu-WC5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="C7R-Wd-6ce"/>
@@ -84,6 +91,7 @@
                             <constraint firstItem="XpT-Nc-Fnx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FSH-T1-GJv"/>
                             <constraint firstItem="Ixg-Fg-XgV" firstAttribute="baseline" secondItem="SeR-Nu-WC5" secondAttribute="baseline" id="KaH-D3-mOm"/>
                             <constraint firstItem="yUK-jH-o94" firstAttribute="baseline" secondItem="XpT-Nc-Fnx" secondAttribute="baseline" id="On8-8Y-WU7"/>
+                            <constraint firstItem="yUK-jH-o94" firstAttribute="leading" secondItem="XpT-Nc-Fnx" secondAttribute="trailing" constant="63" id="SN6-WH-5cM"/>
                             <constraint firstItem="SbW-IF-G6X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sz9-VJ-m5a"/>
                             <constraint firstItem="yUK-jH-o94" firstAttribute="centerX" secondItem="sKc-j5-zoc" secondAttribute="centerX" id="bzt-zL-QB9"/>
                             <constraint firstItem="XpT-Nc-Fnx" firstAttribute="top" secondItem="SeR-Nu-WC5" secondAttribute="bottom" constant="93" id="jTT-Sl-lS9"/>
@@ -101,11 +109,13 @@
                                 <exclude reference="KaH-D3-mOm"/>
                                 <exclude reference="C7R-Wd-6ce"/>
                                 <exclude reference="DJA-NU-C7J"/>
+                                <exclude reference="6Yz-zr-xJ1"/>
                                 <exclude reference="8BF-8R-68l"/>
                                 <exclude reference="rMH-jp-XyJ"/>
                                 <exclude reference="FSH-T1-GJv"/>
                                 <exclude reference="jTT-Sl-lS9"/>
                                 <exclude reference="On8-8Y-WU7"/>
+                                <exclude reference="SN6-WH-5cM"/>
                                 <exclude reference="bzt-zL-QB9"/>
                             </mask>
                         </variation>
@@ -120,11 +130,13 @@
                                 <include reference="KaH-D3-mOm"/>
                                 <include reference="C7R-Wd-6ce"/>
                                 <include reference="DJA-NU-C7J"/>
+                                <include reference="6Yz-zr-xJ1"/>
                                 <include reference="8BF-8R-68l"/>
                                 <include reference="rMH-jp-XyJ"/>
                                 <include reference="FSH-T1-GJv"/>
                                 <include reference="jTT-Sl-lS9"/>
                                 <include reference="On8-8Y-WU7"/>
+                                <include reference="SN6-WH-5cM"/>
                                 <include reference="bzt-zL-QB9"/>
                             </mask>
                         </variation>
