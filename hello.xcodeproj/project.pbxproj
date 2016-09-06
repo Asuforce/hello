@@ -26,6 +26,10 @@
 		32A29AD71D7D1BC70063FABE /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32A29AD51D7D1BC70063FABE /* MyTableViewCell.xib */; };
 		32A29B2A1D7D3B570063FABE /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A29B291D7D3B570063FABE /* Friend.swift */; };
 		32A29B2E1D7D47630063FABE /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A29B2D1D7D47630063FABE /* AlamofireImage.framework */; };
+		32A29B301D7E92150063FABE /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A29B2F1D7E92150063FABE /* DateManager.swift */; };
+		32A29B321D7E926A0063FABE /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A29B311D7E926A0063FABE /* CalendarCell.swift */; };
+		32A29B341D7E92F30063FABE /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32A29B331D7E92F30063FABE /* Calendar.storyboard */; };
+		32A29B3A1D7E98B80063FABE /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A29B391D7E98B80063FABE /* CalendarViewController.swift */; };
 		32B9A0D71D7946AD00A6DB02 /* Table.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32B9A0D61D7946AD00A6DB02 /* Table.storyboard */; };
 		32B9A0D91D79528800A6DB02 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B9A0D81D79528800A6DB02 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -73,6 +77,10 @@
 		32A29AD51D7D1BC70063FABE /* MyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
 		32A29B291D7D3B570063FABE /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		32A29B2D1D7D47630063FABE /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
+		32A29B2F1D7E92150063FABE /* DateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
+		32A29B311D7E926A0063FABE /* CalendarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
+		32A29B331D7E92F30063FABE /* Calendar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
+		32A29B391D7E98B80063FABE /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		32B9A0D61D7946AD00A6DB02 /* Table.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Table.storyboard; sourceTree = "<group>"; };
 		32B9A0D81D79528800A6DB02 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,6 +184,7 @@
 				3211B2DB1D77DA9F001759B1 /* ViewController.swift */,
 				32B9A0D81D79528800A6DB02 /* TableViewController.swift */,
 				32A29AD21D7D1B6A0063FABE /* MyTableViewController.swift */,
+				32A29B391D7E98B80063FABE /* CalendarViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -194,6 +203,7 @@
 				3211B2DD1D77EFB3001759B1 /* Counter.swift */,
 				3295F8EC1D79429700989C62 /* Hoge.swift */,
 				32A29B291D7D3B570063FABE /* Friend.swift */,
+				32A29B2F1D7E92150063FABE /* DateManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -211,6 +221,7 @@
 				323FE6411D795DAE00C9B62A /* RoundRectButton.swift */,
 				32A29AD41D7D1BC70063FABE /* MyTableViewCell.swift */,
 				32A29AD51D7D1BC70063FABE /* MyTableViewCell.xib */,
+				32A29B311D7E926A0063FABE /* CalendarCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -222,6 +233,7 @@
 				3211B2D81D77DA7E001759B1 /* Main.storyboard */,
 				32B9A0D61D7946AD00A6DB02 /* Table.storyboard */,
 				32A29AD01D7D15270063FABE /* MyTable.storyboard */,
+				32A29B331D7E92F30063FABE /* Calendar.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -338,6 +350,7 @@
 				3211B2AA1D77D950001759B1 /* Assets.xcassets in Resources */,
 				32A29AD71D7D1BC70063FABE /* MyTableViewCell.xib in Resources */,
 				3211B2D91D77DA7E001759B1 /* LaunchScreen.storyboard in Resources */,
+				32A29B341D7E92F30063FABE /* Calendar.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +401,9 @@
 				3211B2A31D77D950001759B1 /* AppDelegate.swift in Sources */,
 				32A29AD61D7D1BC70063FABE /* MyTableViewCell.swift in Sources */,
 				3295F8ED1D79429700989C62 /* Hoge.swift in Sources */,
+				32A29B321D7E926A0063FABE /* CalendarCell.swift in Sources */,
+				32A29B3A1D7E98B80063FABE /* CalendarViewController.swift in Sources */,
+				32A29B301D7E92150063FABE /* DateManager.swift in Sources */,
 				32A29B2A1D7D3B570063FABE /* Friend.swift in Sources */,
 				3211B2DE1D77EFB3001759B1 /* Counter.swift in Sources */,
 				3295F8EB1D792F5200989C62 /* APIClient.swift in Sources */,
