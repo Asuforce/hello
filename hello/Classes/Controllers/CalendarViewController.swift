@@ -10,6 +10,11 @@ import UIKit
 
 class CalendarViewController: UIViewController {
     
+    @IBOutlet weak var headerPrevBtn: UIButton!
+    @IBOutlet weak var headerNextBtn: UIButton!
+    @IBOutlet weak var headerTitle: UILabel!
+    @IBOutlet weak var calendarHeaderView: UIView!
+    @IBOutlet weak var calendarCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,14 +27,9 @@ class CalendarViewController: UIViewController {
     }
     
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    @IBAction func tappedHeaderPrevBtn(sender: AnyObject) {
+    }
     
+    @IBAction func tappedHeaderNextBtn(sender: AnyObject) {
+    }
 }

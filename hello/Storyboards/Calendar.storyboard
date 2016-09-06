@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Calendar View Controller-->
         <scene sceneID="tIg-6h-h2S">
             <objects>
-                <viewController id="syz-6j-Bjv" sceneMemberID="viewController">
+                <viewController id="syz-6j-Bjv" customClass="CalendarViewController" customModule="hello" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DNc-ig-Cou"/>
                         <viewControllerLayoutGuide type="bottom" id="vOS-3j-Fxj"/>
@@ -22,21 +22,27 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FpS-DC-9YG">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <state key="normal" title="Button">
+                                        <state key="normal" title="Prev">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="8" y="14" width="46" height="30"/>
+                                            <rect key="frame" x="16" y="14" width="31" height="30"/>
                                         </variation>
+                                        <connections>
+                                            <action selector="tappedHeaderPrevBtn:" destination="syz-6j-Bjv" eventType="touchUpInside" id="G5s-5M-nPm"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZZ-8D-knL">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <state key="normal" title="Button">
+                                        <state key="normal" title="Next">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="346" y="14" width="46" height="30"/>
+                                            <rect key="frame" x="353" y="14" width="32" height="30"/>
                                         </variation>
+                                        <connections>
+                                            <action selector="tappedHeaderNextBtn:" destination="syz-6j-Bjv" eventType="touchUpInside" id="zu5-8D-akY"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drU-z5-BhH">
                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -103,6 +109,13 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="calendarCollectionView" destination="LHx-Ya-wvd" id="mea-O3-oAr"/>
+                        <outlet property="calendarHeaderView" destination="mZa-KC-93G" id="fye-d1-5os"/>
+                        <outlet property="headerNextBtn" destination="tZZ-8D-knL" id="oP6-BQ-jJb"/>
+                        <outlet property="headerPrevBtn" destination="FpS-DC-9YG" id="2lQ-db-1yj"/>
+                        <outlet property="headerTitle" destination="drU-z5-BhH" id="Kon-Zz-Ooh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SvG-7h-wbm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
