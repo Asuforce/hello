@@ -46,6 +46,9 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XpT-Nc-Fnx" customClass="RoundRectButton" customModule="hello" customModuleProvider="target">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="DUV-NT-YNJ"/>
+                                </constraints>
                                 <state key="normal" title="減る"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
@@ -58,18 +61,18 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="279" y="285" width="44" height="30"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="DUV-NT-YNJ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="DUV-NT-YNJ"/>
+                                    </mask>
                                 </variation>
                                 <connections>
                                     <action selector="decreaseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uqJ-Kp-1hb"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKc-j5-zoc">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Table"/>
-                                <connections>
-                                    <segue destination="Khr-tP-J54" kind="show" id="aoG-rr-1Oa"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUK-jH-o94">
@@ -86,6 +89,13 @@
                                     <segue destination="2UP-SM-1kL" kind="show" id="6O5-NQ-ppZ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKc-j5-zoc">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Table"/>
+                                <connections>
+                                    <segue destination="Khr-tP-J54" kind="show" id="aoG-rr-1Oa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -94,20 +104,20 @@
                             <constraint firstItem="sKc-j5-zoc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qfp-5O-zgs"/>
                             <constraint firstItem="yUK-jH-o94" firstAttribute="leading" secondItem="SeR-Nu-WC5" secondAttribute="trailing" constant="50" id="SmI-ui-idp"/>
                             <constraint firstItem="XpT-Nc-Fnx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TTW-g3-gD7"/>
+                            <constraint firstItem="SC3-cm-dk6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZVy-d6-4Ob"/>
                             <constraint firstItem="yUK-jH-o94" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bqE-qH-YuY"/>
-                            <constraint firstItem="sKc-j5-zoc" firstAttribute="top" secondItem="yUK-jH-o94" secondAttribute="bottom" constant="60" id="izz-r8-ucx"/>
-                            <constraint firstItem="SC3-cm-dk6" firstAttribute="leading" secondItem="sKc-j5-zoc" secondAttribute="trailing" constant="51" id="kqX-gb-MRI"/>
+                            <constraint firstItem="sKc-j5-zoc" firstAttribute="top" secondItem="SC3-cm-dk6" secondAttribute="bottom" constant="60" id="hcc-r1-HvS"/>
                             <constraint firstItem="SbW-IF-G6X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q5a-ji-52V"/>
+                            <constraint firstItem="SC3-cm-dk6" firstAttribute="top" secondItem="yUK-jH-o94" secondAttribute="bottom" constant="60" id="qPu-gi-UjU"/>
                             <constraint firstItem="yUK-jH-o94" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xCn-B3-jFQ"/>
-                            <constraint firstItem="SC3-cm-dk6" firstAttribute="top" secondItem="XpT-Nc-Fnx" secondAttribute="bottom" constant="60" id="yhG-ny-eXZ"/>
                             <constraint firstItem="SeR-Nu-WC5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zVw-Fg-IxT"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="XpT-Nc-Fnx"/>
-                                <exclude reference="sKc-j5-zoc"/>
                                 <exclude reference="yUK-jH-o94"/>
                                 <exclude reference="SC3-cm-dk6"/>
+                                <exclude reference="sKc-j5-zoc"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="q5a-ji-52V"/>
@@ -118,18 +128,18 @@
                                 <exclude reference="xCn-B3-jFQ"/>
                                 <exclude reference="Pcm-HL-gaV"/>
                                 <exclude reference="TTW-g3-gD7"/>
+                                <exclude reference="ZVy-d6-4Ob"/>
+                                <exclude reference="qPu-gi-UjU"/>
                                 <exclude reference="Qfp-5O-zgs"/>
-                                <exclude reference="izz-r8-ucx"/>
-                                <exclude reference="kqX-gb-MRI"/>
-                                <exclude reference="yhG-ny-eXZ"/>
+                                <exclude reference="hcc-r1-HvS"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="XpT-Nc-Fnx"/>
-                                <include reference="sKc-j5-zoc"/>
                                 <include reference="yUK-jH-o94"/>
                                 <include reference="SC3-cm-dk6"/>
+                                <include reference="sKc-j5-zoc"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="q5a-ji-52V"/>
@@ -140,10 +150,10 @@
                                 <include reference="xCn-B3-jFQ"/>
                                 <include reference="Pcm-HL-gaV"/>
                                 <include reference="TTW-g3-gD7"/>
+                                <include reference="ZVy-d6-4Ob"/>
+                                <include reference="qPu-gi-UjU"/>
                                 <include reference="Qfp-5O-zgs"/>
-                                <include reference="izz-r8-ucx"/>
-                                <include reference="kqX-gb-MRI"/>
-                                <include reference="yhG-ny-eXZ"/>
+                                <include reference="hcc-r1-HvS"/>
                             </mask>
                         </variation>
                     </view>
