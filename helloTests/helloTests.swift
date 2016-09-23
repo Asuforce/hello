@@ -7,9 +7,6 @@
 //
 
 import XCTest
-import Alamofire
-import AlamofireImage
-import SwiftyJSON
 @testable import hello
 
 class helloTests: XCTestCase {

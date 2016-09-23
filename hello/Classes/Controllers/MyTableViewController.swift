@@ -50,7 +50,7 @@ class MyTableViewController: UITableViewController {
         cell.faceImageView?.af_setImage(
             withURL: URL,
             placeholderImage: placeholderImage,
-            imageTransition: .curlDown(0.2)
+            imageTransition: .crossDissolve(0.2)
         )
     }
 }
