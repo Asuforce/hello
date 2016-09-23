@@ -17,8 +17,8 @@ class Hoge {
         self.content = content
     }
     
-    static func fetchHoges(handler: (Array<Hoge> -> Void)) {
-        APIClient.request(Endpoint.HogeIndex) { json in
+    static func fetchHoges(_ handler: @escaping ((Array<Hoge>) -> Void)) {
+        APIClient.request(Endpoint.hogeIndex) { json in
             let hoges = json["data"].arrayValue.map {
                 Hoge(id: $0["id"].intValue, content: $0["content"].stringValue)
             }

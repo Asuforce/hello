@@ -19,8 +19,8 @@ class Friend {
         self.image_url = image_url
     }
     
-    static func fetchFriends(handler: (Array<Friend> -> Void)) {
-        APIClient.request(Endpoint.FriendIndex) { json in
+    static func fetchFriends(_ handler: @escaping ((Array<Friend>) -> Void)) {
+        APIClient.request(Endpoint.friendIndex) { json in
             let friends = json["data"].arrayValue.map {
                 Friend(name: $0["name"].stringValue, level: $0["level"].intValue, image_url: $0["image_url"].stringValue)
             }

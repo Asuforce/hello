@@ -16,7 +16,7 @@ class MyTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.registerNib(UINib(nibName: "MyTableViewCell", bundle: nil), forCellReuseIdentifier: "myTableCell")
+        tableView.register(UINib(nibName: "MyTableViewCell", bundle: nil), forCellReuseIdentifier: "myTableCell")
         
         Friend.fetchFriends() { friends in
             self.friends = friends
@@ -28,29 +28,29 @@ class MyTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.friends.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("myTableCell", forIndexPath: indexPath) as! MyTableViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "myTableCell", for: indexPath) as! MyTableViewCell
         
         updateCell(cell, indexPath: indexPath)
         
         return cell
     }
     
-    private func updateCell(cell: MyTableViewCell, indexPath: NSIndexPath) {
-        let name = self.friends[indexPath.row].name
-        let URL = NSURL(string: self.friends[indexPath.row].image_url)!
+    fileprivate func updateCell(_ cell: MyTableViewCell, indexPath: IndexPath) {
+        let name = self.friends[(indexPath as NSIndexPath).row].name
+        let URL = Foundation.URL(string: self.friends[(indexPath as NSIndexPath).row].image_url)!
         let placeholderImage = UIImage(named: name)
         
         cell.nameLabel?.text = name
-        cell.levelLabel?.text = "Lv.\(self.friends[indexPath.row].level)"
-        cell.faceImageView?.af_setImageWithURL(
-            URL,
+        cell.levelLabel?.text = "Lv.\(self.friends[(indexPath as NSIndexPath).row].level)"
+        cell.faceImageView?.af_setImage(
+            withURL: URL,
             placeholderImage: placeholderImage,
-            imageTransition: .CurlDown(0.2)
+            imageTransition: .curlDown(0.2)
         )
     }
 }

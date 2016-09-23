@@ -9,7 +9,7 @@
 import Foundation
 
 class Counter {
-    private var count: Int
+    fileprivate var count: Int
     
     init() {
         self.count = 0

@@ -12,12 +12,12 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var countLabel: UILabel!
     
-    @IBAction func increaseButtonTapped(sender: AnyObject) {
+    @IBAction func increaseButtonTapped(_ sender: AnyObject) {
         self.counter.countUp()
         countLabel.text = String(self.counter.current())
     }
     
-    @IBAction func decreaseButtonTapped(sender: AnyObject) {
+    @IBAction func decreaseButtonTapped(_ sender: AnyObject) {
         self.counter.countDown()
         countLabel.text = String(self.counter.current())
     }

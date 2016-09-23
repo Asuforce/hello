@@ -19,16 +19,16 @@ class RoundRectButton: UIButton {
     }
     
     @IBInspectable
-    var buttonColor: UIColor = UIColor.whiteColor() {
+    var buttonColor: UIColor = UIColor.white {
         didSet {
             self.backgroundColor = buttonColor
         }
     }
     
     @IBInspectable
-    var textColor: UIColor = UIColor.whiteColor() {
+    var textColor: UIColor = UIColor.white {
         didSet {
-            self.setTitleColor(textColor, forState: UIControlState.Normal)
+            self.setTitleColor(textColor, for: UIControlState())
         }
     }
 }

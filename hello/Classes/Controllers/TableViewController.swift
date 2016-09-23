@@ -25,19 +25,19 @@ class TableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.hoges.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("hogeCell", forIndexPath: indexPath)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "hogeCell", for: indexPath)
         
         updateCell(cell, indexPath: indexPath)
         
         return cell
     }
     
-    private func updateCell(cell: UITableViewCell, indexPath: NSIndexPath) {
-        cell.textLabel?.text = self.hoges[indexPath.row].content
+    fileprivate func updateCell(_ cell: UITableViewCell, indexPath: IndexPath) {
+        cell.textLabel?.text = self.hoges[(indexPath as NSIndexPath).row].content
     }
 }

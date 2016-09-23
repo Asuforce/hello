@@ -8,68 +8,68 @@
 
 import UIKit
 
-extension NSDate {
-    func monthAgeDate() ->NSDate {
+extension Date {
+    func monthAgeDate() ->Date {
         let addValue = -1
-        let calendar = NSCalendar.currentCalendar()
-        let dateComponents = NSDateComponents()
+        let calendar = Calendar.current
+        var dateComponents = DateComponents()
         dateComponents.month = addValue
-        return calendar.dateByAddingComponents(dateComponents, toDate: self, options: NSCalendarOptions(rawValue: 0))!
+        return (calendar as NSCalendar).date(byAdding: dateComponents, to: self, options: NSCalendar.Options(rawValue: 0))!
     }
     
-    func monthLaterDate() ->NSDate {
+    func monthLaterDate() ->Date {
         let addValue = 1
-        let calendar = NSCalendar.currentCalendar()
-        let dateComponents = NSDateComponents()
+        let calendar = Calendar.current
+        var dateComponents = DateComponents()
         dateComponents.month = addValue
-        return calendar.dateByAddingComponents(dateComponents, toDate: self, options: NSCalendarOptions(rawValue: 0))!
+        return (calendar as NSCalendar).date(byAdding: dateComponents, to: self, options: NSCalendar.Options(rawValue: 0))!
     }
 }
 
 class DateManager: NSObject {
-    var currentMonthOfDates = [NSDate]()
-    var selectedDate = NSDate()
+    var currentMonthOfDates = [Date]()
+    var selectedDate = Date()
     let daysPerWeek: Int = 7
     var numberOfItems: Int!
     
     func daysAcquisition() -> Int {
-        let rangeOfWeeks = NSCalendar.currentCalendar().rangeOfUnit(NSCalendarUnit.WeekOfMonth, inUnit: NSCalendarUnit.Month, forDate: firstDateOfMonth())
+        let rangeOfWeeks = (Calendar.current as NSCalendar).range(of: NSCalendar.Unit.weekOfMonth, in: NSCalendar.Unit.month, for: firstDateOfMonth())
         let numberOfWeeks = rangeOfWeeks.length
         numberOfItems = numberOfWeeks * daysPerWeek
         return numberOfItems
     }
     
-    func firstDateOfMonth() -> NSDate {
-        let components = NSCalendar.currentCalendar().components([.Year, .Month, .Day], fromDate: selectedDate)
+    func firstDateOfMonth() -> Date {
+        var components = (Calendar.current as NSCalendar).components([.year, .month, .day], from: selectedDate)
         components.day = 1
-        let firstDateMonth = NSCalendar.currentCalendar().dateFromComponents(components)!
+        let firstDateMonth = Calendar.current.date(from: components)!
         return firstDateMonth
     }
     
-    func dateForCellAtIndexPath(numberOfItems: Int) {
-        let ordinalityOfFirstDay = NSCalendar.currentCalendar().ordinalityOfUnit(NSCalendarUnit.Day, inUnit: NSCalendarUnit.WeekOfMonth, forDate: firstDateOfMonth())
+    func dateForCellAtIndexPath(_ numberOfItems: Int) {
+        let ordinalityOfFirstDay = (Calendar.current as NSCalendar).ordinality(of: NSCalendar.Unit.day, in: NSCalendar.Unit.weekOfMonth, for: firstDateOfMonth())
         for i in 0 ..< numberOfItems {
-            let dateComponents = NSDateComponents()
+            var dateComponents = DateComponents()
             dateComponents.day = i - (ordinalityOfFirstDay - 1)
-            let date = NSCalendar.currentCalendar().dateByAddingComponents(dateComponents, toDate: firstDateOfMonth(), options: NSCalendarOptions(rawValue: 0))!
+            let date = (Calendar.current as NSCalendar).date(byAdding: dateComponents, to: firstDateOfMonth(), options: NSCalendar.Options(rawValue: 0))!
             currentMonthOfDates.append(date)
         }
     }
     
-    func conversionDateFormat(indexPath: NSIndexPath) -> String {
+    func conversionDateFormat(_ indexPath: IndexPath) -> String {
         dateForCellAtIndexPath(numberOfItems)
-        let formatter: NSDateFormatter = NSDateFormatter()
+        let formatter: DateFormatter = DateFormatter()
         formatter.dateFormat = "d"
-        return formatter.stringFromDate(currentMonthOfDates[indexPath.row])
+        return formatter.string(from: currentMonthOfDates[(indexPath as NSIndexPath).row])
     }
     
-    func prevMonth(date: NSDate) -> NSDate {
+    func prevMonth(_ date: Date) -> Date {
         currentMonthOfDates = []
         selectedDate = date.monthAgeDate()
         return selectedDate
     }
     
-    func nextMonth(date: NSDate) -> NSDate {
+    func nextMonth(_ date: Date) -> Date {
         currentMonthOfDates = []
         selectedDate = date.monthLaterDate()
         return selectedDate

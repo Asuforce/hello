@@ -11,40 +11,40 @@ import Alamofire
 import SwiftyJSON
 
 class APIClient {
-    static private let baseUrl = "https://engineers-training.herokuapp.com"
+    static fileprivate let baseUrl = "https://engineers-training.herokuapp.com"
     
-    static func request(endpoint: Endpoint, handler: (json: JSON) -> Void) {
+    static func request(_ endpoint: Endpoint, handler: @escaping (_ json: JSON) -> Void) {
         let method = endpoint.method()
         let url = fullURL(endpoint)
         
-        Alamofire.request(method, url).validate(statusCode: 200...299).responseJSON { response in
+        Alamofire.request(url, method: method).validate(statusCode: 200...299).responseJSON { response in
             switch response.result {
-            case .Success(let value):
-                handler(json: JSON(value))
-            case .Failure(let error):
+            case .success(let value):
+                handler(JSON(value))
+            case .failure(let error):
                 print(error)
             }
         }
     }
     
-    static private func fullURL(endpoint: Endpoint) -> String {
+    static fileprivate func fullURL(_ endpoint: Endpoint) -> String {
         return baseUrl + endpoint.path()
     }
 }
 
 enum Endpoint {
-    case HogeIndex
-    case FriendIndex
+    case hogeIndex
+    case friendIndex
     
-    func method() -> Alamofire.Method {
-        return .GET
+    func method() -> Alamofire.HTTPMethod {
+        return .get
     }
     
     func path() -> String {
         switch self {
-        case .HogeIndex:
+        case .hogeIndex:
             return "/api/microposts"
-        case .FriendIndex:
+        case .friendIndex:
             return "/api/characters"
         }
     }
